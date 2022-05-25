@@ -17,7 +17,7 @@ void Player::previousBlock() {
     // TODO: implement (lesson 2)
 }
 
-void Player::collisionCallBack(const CollisionInfo &info) {
+void Player::collisionCallBack(const CollisionPoint &info) {
     // setting vertical velocity to zero after collision
 
     Vec3D velocity_parallel = info.normal * velocity().dot(info.normal);

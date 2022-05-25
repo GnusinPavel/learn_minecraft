@@ -14,7 +14,7 @@ void Minecraft::start() {
     setGlEnable(true);
 
     // loading map
-    // TODO: implement (lesson 1)
+    map->loadMap(MinecraftConsts::MAP_NAME);
 
     // setting callbacks for playerController
     playerController->setAddCubeCallBack([this](){ addCube(); });
@@ -53,6 +53,8 @@ void Minecraft::update() {
     }
 
     playerController->update();
+
+    cameraController.update();
 }
 
 void Minecraft::updateCubeInHandColor() {

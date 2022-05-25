@@ -105,7 +105,7 @@ add_executable(${CMAKE_PROJECT_NAME}
 if(APPLE OR UNIX)
     include_directories(/usr/local/include)
 else()
-    set(SFML_DIR "C:/Libraries/SFML/lib/cmake/SFML")
+    set(SFML_DIR "c:/develop/vectozavr/libs/SFML-2.5.1/lib/cmake/SFML")
     set(SFML_STATIC_LIBRARIES TRUE)
 endif()
 
