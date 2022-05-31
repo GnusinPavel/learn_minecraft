@@ -64,7 +64,13 @@ void PlayerController::update() {
     }
 
     // Add or remove block
-    // TODO: implement (lesson 3)
+    if (_mouse->isButtonTapped(sf::Mouse::Right)) {
+        _addCubeCallBack();
+    }
+    if (_mouse->isButtonTapped(sf::Mouse::Left)) {
+        _removeCubeCallBack();
+    }
+
 
     animateCameraMotion();
 }
@@ -75,7 +81,9 @@ void PlayerController::animateCameraMotion() {
     auto camera = _player->attached(ObjectNameTag("Camera"));
 
     // Camera movement during run
-    // TODO: implement (lesson 3)
+    if (_inRunning) {
+        // todo!
+    }
 }
 
 // setting callbacks
